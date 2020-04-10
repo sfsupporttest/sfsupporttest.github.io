@@ -3,16 +3,11 @@
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #1A8DB4;
-		font-family: "Salesforce Sans", sans-serif;
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #1A8DB4;
-	}
-	@font-face {
-		font-family: 'Salesforce Sans';
-		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+		outline: 1px solid #005290;
 	}
 </style>
 
@@ -41,17 +36,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://legendboats--UAT.cs11.my.salesforce.com',
-			'https://uat-mylegend.cs11.force.com/support',
+			'https://legendboats.my.salesforce.com',
+			'https://support.legendboats.com/',
 			gslbBaseURL,
-			'00DZ000000N90mT',
-			'Chat_Support_Agents',
+			'00Di0000000aRhm',
+			'Legend_Customer_Support_LiveAgent',
 			{
-				baseLiveAgentContentURL: 'https://c.la3-c1cs-dfw.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la1-c2-ord.salesforceliveagent.com/content',
 				deploymentId: '5721Y000000W7ew',
-				buttonId: '5731Y000000XZaK',
-				baseLiveAgentURL: 'https://d.la3-c1cs-dfw.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Chat_Support_Agents',
+				buttonId: '5731Y000000NaTb',
+				baseLiveAgentURL: 'https://d.la1-c2-ord.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1Y000000blKCUAY_1713115ffea',
 				isOfflineSupportEnabled: true
 			}
 		);
@@ -59,7 +54,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://legendboats--UAT.cs11.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://legendboats.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
