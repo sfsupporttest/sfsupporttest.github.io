@@ -36,17 +36,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://legendboats.my.salesforce.com',
-			'https://support.legendboats.com/',
+			'https://deservicestest-dev-ed.my.salesforce.com',
+			'https://servicescommunity-developer-edition.na174.force.com',
 			gslbBaseURL,
-			'00Di0000000aRhm',
-			'Legend_Customer_Support_LiveAgent',
+			'00D6g000005j1ZR',
+			'NoChatBot',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2-ord.salesforceliveagent.com/content',
-				deploymentId: '5721Y000000W7ew',
-				buttonId: '5731Y000000NaTb',
-				baseLiveAgentURL: 'https://d.la1-c2-ord.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1Y000000blKCUAY_1713115ffea',
+				baseLiveAgentContentURL: 'https://c.la1-c2-ia5.salesforceliveagent.com/content',
+				deploymentId: '5726g0000005FZS',
+				buttonId: '5736g0000005GQw',
+				baseLiveAgentURL: 'https://d.la1-c2-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I6g000000M0C9EAK_17219bd2c17',
 				isOfflineSupportEnabled: true
 			}
 		);
@@ -54,7 +54,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://legendboats.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://deservicestest-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
