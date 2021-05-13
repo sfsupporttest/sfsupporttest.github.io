@@ -67,6 +67,10 @@ embedded_svc.settings.extraPrechatFormDetails = [{
   "entityName": "Contact"
 }];
 
+		embedded_svc.addEventHandler("onAvailability", function(data) {
+    console.log("onAgentMessage event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+			$('.helpButtonEnabled').click();
+});
 		
 		embedded_svc.init(
 			'https://deservicestest-dev-ed.my.salesforce.com',
