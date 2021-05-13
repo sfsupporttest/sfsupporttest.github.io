@@ -1,5 +1,14 @@
 <html>
 <body>
+	
+<p id="demo" onclick="myFunction()">Click to open sidebar</p>
+
+	
+	$("demo").click(function(){
+    $('.helpButtonEnabled').trigger("click");
+});
+	
+	
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
