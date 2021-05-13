@@ -1,12 +1,15 @@
 <html>
 <body>
 	
-<p id="demo" onclick="myFunction()">Click to open sidebar</p>
+<button id="demo" onclick="myFunction()">Click to open sidebar</button>
 
+	<script>
+function myFunction() {
+  $('.helpButtonEnabled').trigger("click");
+}
+</script>
 	
-	$("demo").click(function(){
-    $('.helpButtonEnabled').trigger("click");
-});
+
 	
 	
 <style type='text/css'>
