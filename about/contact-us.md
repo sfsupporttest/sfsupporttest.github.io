@@ -48,7 +48,7 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
+embedded_svc.settings.devMode = true;
 		embedded_svc.init(
 			'https://brave-goat-275838-dev-ed.my.salesforce.com',
 			'https://gurinder-developer-edition.ap4.force.com',
