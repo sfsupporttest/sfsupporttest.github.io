@@ -9,20 +9,12 @@
 		outline: 1px solid #005290;
 	}
 </style>
-		
-		<script type='text/javascript'>
-	function bootstrapChat() {
-		embedded_svc.bootstrapEmbeddedService();
-	}
-</script>
-
-		
 
 <!-- Start of Invitations -->
 <div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
 	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
 		<img id="embeddedServiceAvatar"></img>
-
+<div> We are online </div>
 		<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
 		<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
 	</div>
@@ -64,15 +56,10 @@
 </script>
 <!-- End of Invitations -->
 
-	
-		<button onclick="bootstrapChat()" style="position: fixed; bottom: 0px; right: 0px;" width="20px" height="20px" >
-	<img src="https://featuretesting212.force.com/cs/resource/1642996274000/chaticon">
-		</button>
-	
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>	
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = false; //Or false
+		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
