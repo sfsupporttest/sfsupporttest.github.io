@@ -55,11 +55,27 @@
 	})();
 </script>
 <!-- End of Invitations -->
+<script type='text/javascript'>
+	function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
+</script>
+	
+	img { 
+  width: 100px;
+  height: 100px;
+  opacity: 1.0;
+}
+</style>
 
+<button onclick="bootstrapChat()">
+	 <img src="https://featuretesting212.force.com/cs/resource/1642998283000/chaticon"  width="1000" height="300">
+</button>
+	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.displayHelpButton = false; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
