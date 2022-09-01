@@ -90,10 +90,10 @@
           
         } else {
             document.write("You are using Desktop");
-          lhandlers();
+          loadHandlers();
         }
       
-     const lhandlers = loadHandlers() {
+     function loadHandlers() {
       embedded_svc.addEventHandler("afterMinimize", function() {
           var sidebar = document.querySelector('.embeddedServiceSidebarMinimizedDefaultUI');
           var height = sidebar.clientHeight;
