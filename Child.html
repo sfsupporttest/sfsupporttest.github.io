@@ -33,11 +33,7 @@
         it returns boolean value*/
         let isMobileDevice = regexp.test(details);
    
-    if (isMobileDevice) {
-            document.write("You are using a Mobile Device 2");
-          
-          
-        } else {
+   
             document.write("You are using Desktop");
             var height = helpButton.clientHeight;
         var width = helpButton.clientWidth;
@@ -46,7 +42,7 @@
                                   frameWidth: width
                                   }, '*'); // Used a * but for security reasons you can plug in the domain name.
       
-        }
+        
    
       
       window.onload = helpButtonLoaded();
