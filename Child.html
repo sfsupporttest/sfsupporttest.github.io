@@ -27,7 +27,8 @@
                                   frameWidth: width
                                   }, '*'); // Used a * but for security reasons you can plug in the domain name.
       }
-      window.onload = helpButtonLoaded();
+  
+     
       
     var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = true; //Or false
@@ -90,6 +91,7 @@
           
         } else {
             document.write("You are using Desktop");
+           window.onload = helpButtonLoaded();
           loadHandlers();
         }
       
