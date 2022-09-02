@@ -63,8 +63,7 @@
       
       embedded_svc.settings.devMode = true;
       
-        embedded_svc.settings.widgetWidth = 320;
-        embedded_svc.settings.widgetHeight = 498;
+      
       
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -126,6 +125,8 @@
           
         } else {
             document.write("You are using Desktop");
+            embedded_svc.settings.widgetWidth = 320;
+        embedded_svc.settings.widgetHeight = 498;
            window.onload = helpButtonLoaded();
           loadHandlers();
         }
