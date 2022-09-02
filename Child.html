@@ -40,15 +40,7 @@
         it returns boolean value*/
         let isMobileDevice = regexp.test(details);
   
-        if (isMobileDevice) {
-            document.write("You are using a Mobile Device");
-          
-          
-        } else {
-            document.write("You are using Desktop");
-           window.onload = helpButtonLoaded();
-          loadHandlers();
-        }
+       
       
     var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = true; //Or false
@@ -94,6 +86,7 @@
         );
         
      
+     
       
      function loadHandlers() {
       embedded_svc.addEventHandler("afterMinimize", function() {
@@ -126,6 +119,16 @@
         });
         
       }
+      
+        if (isMobileDevice) {
+            document.write("You are using a Mobile Device");
+          
+          
+        } else {
+            document.write("You are using Desktop");
+           window.onload = helpButtonLoaded();
+          loadHandlers();
+        }
         
         
     };
