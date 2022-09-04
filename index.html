@@ -35,8 +35,11 @@
          document.write("<h3>Its a Mobile Device !</h3>");
           // chatFrame.style.height = 1400+"px" ;
           // chatFrame.style.position = "relative";
-          divframe.style.height = "-webkit-fill-available";
-          divframe.style.width = "-webkit-fill-available";
+          
+          var divFrame = document.getElementById("divframe");
+          divFrame.style.height = "-webkit-fill-available";
+          divFrame.style.width = "-webkit-fill-available";
+          
       } else {
          document.write("<h3>Its a Desktop !</h3>");
           
