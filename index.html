@@ -33,8 +33,10 @@
       
       if (isMobileDevice) {
          document.write("<h3>Its a Mobile Device !</h3>");
-          chatFrame.style.height = 1400+"px" ;
-          chatFrame.style.position = "relative";
+          // chatFrame.style.height = 1400+"px" ;
+          // chatFrame.style.position = "relative";
+          divframe.style.height = "-webkit-fill-available";
+          divframe.style.width = "-webkit-fill-available";
       } else {
          document.write("<h3>Its a Desktop !</h3>");
           
@@ -52,7 +54,7 @@
     };
   </script>
    <body>
-    <div style ="bottom: 0px; right: 0px; position: absolute;">
+    <div id="divframe" style ="bottom: 0px; right: 0px; position: absolute;">
       <iframe id="chatFrame" src= "Child.html"></iframe>
     </div>
   </body>
