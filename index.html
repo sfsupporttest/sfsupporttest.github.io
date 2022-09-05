@@ -37,6 +37,8 @@
           // chatFrame.style.position = "relative";
           
            window.onmessage = function(e) {
+               console.log("e.data" + e.data);
+               console.log("e" + e);
       console.log(e.data.hasOwnProperty("frameHeight"));
       if (e.data.hasOwnProperty("frameHeight")) {
       //  var chatFrame = document.getElementById("chatFrame");
