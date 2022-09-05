@@ -40,7 +40,7 @@
                console.log("e.data" + e.data);
                console.log("e" + e);
       console.log(e.data.hasOwnProperty("frameHeight"));
-      if (e.data.hasOwnProperty("frameHeight")) {
+      if (e.data.hasOwnProperty("frameHeight") && e.data.hasOwnProperty("name") == "maximize") {
       //  var chatFrame = document.getElementById("chatFrame");
      //   chatFrame.style.height = e.data.frameHeight + 20 + "px";
       //  chatFrame.style.width = e.data.frameWidth + 20 + "px";
@@ -53,6 +53,12 @@
           divFrame.style.width = e.data.frameWidth ;
         //   chatFrame.style.position = "relative";
       }
+               else if (e.data.hasOwnProperty("name") == "minimize"){
+                   
+                   var divFrame = document.getElementById("divframe")
+           divFrame.style.height = "" ;
+          divFrame.style.width = "" ;
+               }
                  
       }
           
