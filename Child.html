@@ -93,6 +93,7 @@
           var sidebar = document.querySelector('.embeddedServiceSidebarMinimizedDefaultUI');
           var height = sidebar.clientHeight;
           var width = sidebar.clientWidth;
+       
           window.parent.postMessage({
             frameHeight: height,
             frameWidth: width
@@ -103,10 +104,21 @@
           var container = document.querySelector('.dockableContainer');
           var height = container.clientHeight;
           var width = container.clientWidth;
-          window.parent.postMessage({
+          
+           if (isMobileDevice) {
+              window.parent.postMessage({
+           frameHeight:  "-webkit-fill-available",
+             frameWidth: "100%"
+                   }, '*');
+        }
+          else {
+             window.parent.postMessage({
             frameHeight: embedded_svc.settings.widgetHeight,
             frameWidth: embedded_svc.settings.widgetWidth
           }, '*');
+            
+          }
+         
         });
 
         embedded_svc.addEventHandler("afterDestroy", function() {
