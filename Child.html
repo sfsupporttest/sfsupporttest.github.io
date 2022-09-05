@@ -95,6 +95,7 @@
           var width = sidebar.clientWidth;
        
           window.parent.postMessage({
+            name:"minimize",
             frameHeight: height,
             frameWidth: width
            }, '*');
@@ -107,12 +108,14 @@
           
            if (isMobileDevice) {
               window.parent.postMessage({
+                name:"maximize",
            frameHeight:  "-webkit-fill-available",
              frameWidth: "100%"
                    }, '*');
         }
           else {
              window.parent.postMessage({
+               name:"maximize",
             frameHeight: embedded_svc.settings.widgetHeight,
             frameWidth: embedded_svc.settings.widgetWidth
           }, '*');
