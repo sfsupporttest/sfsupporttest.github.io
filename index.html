@@ -51,6 +51,12 @@
           let h = e.data.frameHeight;
            divFrame.style.height = h ;
           divFrame.style.width = e.data.frameWidth ;
+          if (e.data.name = "minimize"){
+          divFrame.style.height = e.data.frameHeight;
+             // divFrame.style.width = e.data.frameWidth;
+              divFrame.clientHeight = e.data.frameHeight;
+               divFrame.clientHeight = e.data.frameWidth;
+          }
         //   chatFrame.style.position = "relative";
       }
                
