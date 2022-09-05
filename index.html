@@ -46,7 +46,10 @@
       //  chatFrame.style.width = e.data.frameWidth + 20 + "px";
           
           var divFrame = document.getElementById("divframe");
-           divFrame.style.height = e.data.frameHeight ;
+          console.log(e.data.frameHeight);
+          console.log(e.data.frameWidth);
+          let h = e.data.frameHeight;
+           divFrame.style.height = h ;
           divFrame.style.width = e.data.frameWidth ;
         //   chatFrame.style.position = "relative";
       }
