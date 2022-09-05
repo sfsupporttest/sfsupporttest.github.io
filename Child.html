@@ -27,7 +27,7 @@
                                   frameWidth: width
                                   }, '*'); // Used a * but for security reasons you can plug in the domain name.
       }
-  
+   window.onload = helpButtonLoaded();
       /* Storing user's device details in a variable*/
         let details = navigator.userAgent;
   
@@ -40,7 +40,8 @@
         it returns boolean value*/
         let isMobileDevice = regexp.test(details);
   
-       
+         
+          
       
     var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = true; //Or false
@@ -63,7 +64,8 @@
       
       embedded_svc.settings.devMode = true;
       
-      
+      embedded_svc.settings.widgetWidth = 320;
+        embedded_svc.settings.widgetHeight = 498;
       
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -86,8 +88,7 @@
         
      
      
-      
-     function loadHandlers() {
+     
       embedded_svc.addEventHandler("afterMinimize", function() {
           var sidebar = document.querySelector('.embeddedServiceSidebarMinimizedDefaultUI');
           var height = sidebar.clientHeight;
@@ -117,7 +118,7 @@
           }, '*');
         });
         
-      }
+      
       
         if (isMobileDevice) {
             document.write("You are using a Mobile Device");
@@ -125,10 +126,8 @@
           
         } else {
             document.write("You are using Desktop");
-            embedded_svc.settings.widgetWidth = 320;
-        embedded_svc.settings.widgetHeight = 498;
-           window.onload = helpButtonLoaded();
-          loadHandlers();
+          
+         
         }
         
         
