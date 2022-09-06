@@ -54,11 +54,12 @@
           divFrame.style.width = e.data.frameWidth ;
           console.log(divFrame.style.height);
           console.log(divFrame.style.width);
-          
-          if (e.data.name = "minimize"){
-              var chatFrame = document.getElementById("chatFrame");
+           var chatFrame = document.getElementById("chatFrame");
         chatFrame.style.height = divFrame.style.height;
         chatFrame.style.width = divFrame.style.width;
+          
+          if (e.data.name === 'minimize'){
+             
          document.getElementsByTagName("div").divframe.style.height =  'unset';
               document.getElementsByTagName("div").divframe.style.width =  'unset';
          
